@@ -2,15 +2,24 @@
 #include "stdlib.h"
 #include "math.h"
 
-int PGCD(int A, int B)
+int PGCD(const int A, const int B)
 {
-
+	while(A != B)
+	{
+		if (A > B)
+		{
+			A = A - B;
+		else
+			B = B - A;
+		}
+	}
 	return A;
 }
 
 int main (int argc, char * argv []){
 	printf("(II) Starting PGCD program\n");
-
+	int result;
+	result = PGCD(15, 26);
 
 	printf("(II) End of PGCD program\n");
   return 0;
