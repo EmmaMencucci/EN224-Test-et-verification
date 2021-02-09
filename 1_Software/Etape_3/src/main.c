@@ -13,7 +13,7 @@ int RandB ()
   int B = rand() % 65536;
   return B;
 }
-// Premiere methode du calcul PGCD
+// Premiere methode
 int PGCD(int A, int B)
 {
   if(A==0)
