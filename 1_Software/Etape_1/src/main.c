@@ -2,7 +2,7 @@
 #include "stdlib.h"
 #include "math.h"
 
-int PGCD(const int A, const int B)
+int PGCD(int A, int B)
 {
 	while(A != B)
 	{
