@@ -13,8 +13,15 @@ int RandB ()
   int B = rand() % 65535;
   return B;
 }
+// Premiere methode
 int PGCD(int A, int B)
 {
+  if(A==0)
+    return B;
+  if (B==0)
+    return A;
+  if (A==0 && B==0)
+    return 0;
 	while(A != B)
 	{
 		if (A > B)
@@ -26,13 +33,13 @@ int PGCD(int A, int B)
 
 	}
 	return A;
-  
+
 }
 
 int main (int argc, char * argv []){
 	printf("(II) Starting PGCD program\n");
 	int result;
-	for(int i=0;i<20;i++)
+	for(int i=0;i<2000;i++)
 	{
         int A = RandA();
         int B = RandB();
