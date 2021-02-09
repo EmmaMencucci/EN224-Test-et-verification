@@ -9,9 +9,9 @@ int PGCD(int A, int B)
 		if (A > B)
 		{
 			A = A - B;
+		}
 		else
 			B = B - A;
-		}
 	}
 	return A;
 }
