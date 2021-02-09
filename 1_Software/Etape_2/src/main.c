@@ -26,6 +26,7 @@ int PGCD(int A, int B)
 
 	}
 	return A;
+  
 }
 
 int main (int argc, char * argv []){
