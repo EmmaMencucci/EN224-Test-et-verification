@@ -16,6 +16,7 @@ int RandB ()
 // Premiere methode du calcul PGCD
 int PGCD(int A, int B)
 {
+  // gerer les cas particulier (le zéro)
   if(A==0)
     return B;
   if (B==0)

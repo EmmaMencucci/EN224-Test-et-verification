@@ -16,10 +16,12 @@ int RandB ()
 // Premiere methode
 int PGCD(int A, int B)
 {
+  // gerer les cas particulier (le zéro)
   if(A==0)
     return B;
   if (B==0)
     return A;
+
 	while(A != B)
 	{
 		if (A > B)
