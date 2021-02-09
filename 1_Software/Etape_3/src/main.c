@@ -35,18 +35,32 @@ int PGCD(int A, int B)
 	return A;
 
 }
-
+// Deuxième méthode pour le calcul du PGCD
+int PGCD2 (int N1, int N2 )
+{
+  int reste;
+  while(N2 != 0)
+  {
+    reste = N1 % N2;
+    N1 = N2;
+    N2 = reste;
+  }
+  return N1;
+}
 int main (int argc, char * argv []){
 	printf("(II) Starting PGCD program\n");
-	int result;
-	for(int i=0;i<2000;i++)
+	for(int i=0;i<20;i++)
 	{
-        int A = RandA();
-        int B = RandB();
+    int A = RandA();
+    int B = RandB();
+    // Comparaison avec les deux méthodes de calcul
+    if (PGCD(A,B)!=PGCD2(A,B))
+    {
         printf(" Valeur de A : %d et valeur de B : %d\n", A, B);
-        result = PGCD(A, B);
-    	printf("Le PGCD est : %d\n", result);
-    	printf("(II) End of PGCD program\n");
-	}
+        printf("Le PGCD est : %d\n", PGCD(A,B));
+        printf("Le PGCD2 est : %d\n", PGCD2(A,B));
+    }
+  }
+    printf("(II) End of PGCD program\n");
   return 0;
 }

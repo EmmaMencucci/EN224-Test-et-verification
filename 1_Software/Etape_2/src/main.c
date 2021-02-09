@@ -40,12 +40,12 @@ int main (int argc, char * argv []){
 	int result;
 	for(int i=0;i<2000;i++)
 	{
-        int A = RandA();
-        int B = RandB();
-        printf(" Valeur de A : %d et valeur de B : %d\n", A, B);
-        result = PGCD(A, B);
-    	printf("Le PGCD est : %d\n", result);
-    	printf("(II) End of PGCD program\n");
-	}
+      int A = RandA();
+      int B = RandB();
+      printf(" Valeur de A : %d et valeur de B : %d\n", A, B);
+      result = PGCD2(A, B);
+      printf("Le PGCD est : %d\n", result);
+      printf("(II) End of PGCD program\n");
+	//}
   return 0;
 }
